@@ -4,7 +4,7 @@
 使用 SODA10M 有标签的子数据集，可官网下载，也可百度云链接：[soda10m](https://pan.baidu.com/s/1KRJW_gcc_Zox6pOL4tWboA) ，提取码: cpdd
 
 数据集包括 labeled_trainval.tar 和 labeled_test.tar 两个压缩包，数据集的标签文件是集中式的 json 文件，即所有图像的标签都在一个 json 文件中，json 文件有三个：instance_train.json、instance_val.json 和 instance_test.json，需要转换的是 instance_train.json、instance_val.json ，转换为 yolo 支持的格式，即 txt 文件，一个 txt 文件代表一幅图像的数据，txt 文件中的每一行代表一个标注框的数据：类别 + 归一化后的四个坐标点，共五个数据。转换方法见[coco_to_yolo](./coco_to_yolo/json_to_yolo.py)  
-注意：原来的 json 文件中 6 个类别的 category_id 是 1~6 ，转换后是 0~5，即 ['Pedestrian':0, 'Cyclist':1, 'Car':2, 'Truck':3, 'Tram':4, 'Tricycle':5]，目的是为了方便 yolov5 模型训练，转换之后图像和标签数据按如下结构组织：
+注意：原来的 json 文件中 6 个类别的 category_id 是 1 到 6 ，转换后是 0 到 5，即 ['Pedestrian':0, 'Cyclist':1, 'Car':2, 'Truck':3, 'Tram':4, 'Tricycle':5]，目的是为了方便 yolov5 模型训练，转换之后图像和标签数据按如下结构组织：
 ```
 soda10m/
 ├── images/
