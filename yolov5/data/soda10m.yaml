@@ -1,0 +1,5 @@
+train: ../soda10m/images/train  # 训练集路径
+val: ../soda10m/images/val      # 验证集路径
+
+nc: 6                          # 类别数
+names: ['Pedestrian', 'Cyclist', 'Car', 'Truck', 'Tram', 'Tricycle']  # 类别名称
