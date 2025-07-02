@@ -22,5 +22,6 @@
 *.txt
 
 # datasets -----------------------------------------------
-soda10m/images/
-soda10m/labels/
+train/
+val/
+test/
